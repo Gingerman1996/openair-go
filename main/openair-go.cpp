@@ -216,9 +216,9 @@ static esp_err_t init_sht4x(void) {
 
 static esp_err_t init_spi_epaper(void) {
   spi_bus_config_t bus_cfg = {};
-  bus_cfg.mosi_io_num = EPAPER_MOSI_GPIO;
-  bus_cfg.miso_io_num = EPAPER_MISO_GPIO;
-  bus_cfg.sclk_io_num = EPAPER_SCLK_GPIO;
+  bus_cfg.mosi_io_num = SPI_MOSI_GPIO;
+  bus_cfg.miso_io_num = SPI_MISO_GPIO;
+  bus_cfg.sclk_io_num = SPI_SCLK_GPIO;
   bus_cfg.quadwp_io_num = -1;
   bus_cfg.quadhd_io_num = -1;
   bus_cfg.max_transfer_sz = 4096;

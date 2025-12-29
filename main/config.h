@@ -12,14 +12,16 @@
 #define I2C_SDA_GPIO I2C_SDA_GPIO_IO7
 #endif
 
-// ePaper (SPI)
+// SPI Bus (shared with ePaper and SPI Flash)
+#define SPI_SCLK_GPIO GPIO_NUM_23
+#define SPI_MISO_GPIO GPIO_NUM_24
+#define SPI_MOSI_GPIO GPIO_NUM_25
+
+// ePaper
 #define EPAPER_CS_GPIO GPIO_NUM_0
 #define EPAPER_DC_GPIO GPIO_NUM_15
 #define EPAPER_RES_GPIO GPIO_NUM_9
 #define EPAPER_BUSY_GPIO GPIO_NUM_10
-#define EPAPER_SCLK_GPIO GPIO_NUM_23
-#define EPAPER_MISO_GPIO GPIO_NUM_24
-#define EPAPER_MOSI_GPIO GPIO_NUM_25
 
 // Peripherals / control
 #define INT_GPIO GPIO_NUM_1
