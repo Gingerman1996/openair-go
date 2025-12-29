@@ -1,0 +1,36 @@
+#pragma once
+
+#include "driver/gpio.h"
+#include "soc/uart_pins.h"
+
+// I2C
+#define I2C_SCL_GPIO GPIO_NUM_6
+#define I2C_SDA_GPIO_IO7 GPIO_NUM_7
+#define I2C_SDA_GPIO_IO8 GPIO_NUM_8
+// Set to I2C_SDA_GPIO_IO8 when JP1 selects IO8.
+#ifndef I2C_SDA_GPIO
+#define I2C_SDA_GPIO I2C_SDA_GPIO_IO7
+#endif
+
+// ePaper (SPI)
+#define EPAPER_CS_GPIO GPIO_NUM_0
+#define EPAPER_DC_GPIO GPIO_NUM_15
+#define EPAPER_RES_GPIO GPIO_NUM_9
+#define EPAPER_BUSY_GPIO GPIO_NUM_10
+#define EPAPER_SCLK_GPIO GPIO_NUM_23
+#define EPAPER_MISO_GPIO GPIO_NUM_24
+#define EPAPER_MOSI_GPIO GPIO_NUM_25
+
+// Peripherals / control
+#define INT_GPIO GPIO_NUM_1
+#define WD_RST_GPIO GPIO_NUM_2
+#define ACC_INT_GPIO GPIO_NUM_3
+#define NAND_CS_GPIO GPIO_NUM_4
+#define QON_GPIO GPIO_NUM_5
+#define EN_PM1_GPIO GPIO_NUM_26
+// #define IO27_GPIO GPIO_NUM_27
+// #define IO28_GPIO GPIO_NUM_28
+
+// UART0 (TXD0/RXD0)
+#define MCU_TX_GPIO U0TXD_GPIO_NUM
+#define MCU_RX_GPIO U0RXD_GPIO_NUM
